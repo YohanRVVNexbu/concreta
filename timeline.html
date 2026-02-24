@@ -255,7 +255,7 @@
       background: url('timeline-assets/image-2005.png') 50% / cover no-repeat;
     }
     .ctl-slide-8 { background: #EAEDF0; }
-    .ctl-slide-9 { background: #0B1A2E; }
+    .ctl-slide-9 { background: #061C42; }
     .ctl-slide-10 { background: #F2F0ED; }
 
     /* Placeholder layout para slides 3-10 */
@@ -753,6 +753,84 @@
       object-fit: cover;
     }
 
+    /* ========================
+       SLIDE 9 - 2015 - Gobernanza
+    ======================== */
+    .ctl-slide-9 {
+      position: relative;
+    }
+
+    .ctl-slide-9 .ctl-left {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 0 40px 40px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .ctl-slide-9 .ctl-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 2;
+    }
+
+    .ctl-slide-9 .ctl-title {
+      color: #FFF;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 45.078px;
+      margin: 0;
+    }
+
+    .ctl-slide-9 .ctl-subtitle {
+      color: #FFF;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    .ctl-slide-9 .ctl-description {
+      color: #FFF;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+      margin: 0;
+      max-width: 451px;
+    }
+
+    .ctl-slide-9 .ctl-year {
+      color: rgba(200, 213, 235, 0.40);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 314.132px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 313.559px;
+      pointer-events: none;
+      z-index: 2;
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+    }
+
+    .ctl-slide-9 .ctl-image {
+      width: 65%;
+      position: relative;
+    }
+
+    .ctl-slide-9 .ctl-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     /* Dark text variants for light bg slides */
     .ctl-slide-10 .ctl-label { color: rgba(11, 26, 46, 0.5); }
     .ctl-slide-10 .ctl-title { color: #0B1A2E; }
@@ -960,15 +1038,20 @@
         </div>
       </div>
 
-      <!-- SLIDE 9 - 2015 - Reconocimiento -->
-      <div class="ctl-slide ctl-slide-9 ctl-slide-placeholder" data-index="8">
-        <div class="ctl-content">
-          <span class="ctl-label">Reconocimiento</span>
-          <h2 class="ctl-title">2015</h2>
-          <p class="ctl-description">Múltiples reconocimientos y premios nacionales e internacionales.</p>
+      <!-- SLIDE 9 - 2015 - Gobernanza -->
+      <div class="ctl-slide ctl-slide-9" data-index="8">
+        <div class="ctl-left">
+          <div class="ctl-content">
+            <h2 class="ctl-title">Gobernanza</h2>
+            <h3 class="ctl-subtitle">Gobierno corporativo institucional</h3>
+            <p class="ctl-description">
+              En 2015, los socios fundadores —anticipando su retiro— establecen un gobierno corporativo formal con directorio y gerencias. Rodrigo Donoso se retira en 2021 y Guillermo Larraín en 2020, asegurando la continuidad.
+            </p>
+          </div>
+          <span class="ctl-year">2015</span>
         </div>
         <div class="ctl-image">
-          <img src="https://placehold.co/1200x900/2a4a6c/ffffff?text=2015" alt="Reconocimiento 2015">
+          <img src="timeline-assets/image-2015.png" alt="Gobernanza 2015">
         </div>
       </div>
 

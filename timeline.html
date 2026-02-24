@@ -256,7 +256,7 @@
     }
     .ctl-slide-8 { background: #EAEDF0; }
     .ctl-slide-9 { background: #061C42; }
-    .ctl-slide-10 { background: #F2F0ED; }
+    .ctl-slide-10 { background: #EAEDF0; }
 
     /* Placeholder layout para slides 3-10 */
     .ctl-slide-placeholder .ctl-content {
@@ -624,7 +624,7 @@
       position: relative;
       flex-direction: column;
       justify-content: space-between;
-      padding: 60px 68px 120px 60px;
+      padding: 60px 68px 40px 60px;
     }
 
     .ctl-slide-7 .ctl-content {
@@ -671,7 +671,7 @@
       line-height: 373.09px;
       pointer-events: none;
       z-index: 2;
-      margin-bottom: 60px;
+      margin-bottom: 0;
     }
 
     /* ========================
@@ -831,12 +831,79 @@
       object-fit: cover;
     }
 
-    /* Dark text variants for light bg slides */
-    .ctl-slide-10 .ctl-label { color: rgba(11, 26, 46, 0.5); }
-    .ctl-slide-10 .ctl-title { color: #0B1A2E; }
-    .ctl-slide-10 .ctl-description { color: rgba(11, 26, 46, 0.6); }
-    .ctl-slide-10 .ctl-year-bg {
-      -webkit-text-stroke: 1px rgba(11, 26, 46, 0.15);
+    /* ========================
+       SLIDE 10 - 2019-2026 - Legado
+    ======================== */
+    .ctl-slide-10 {
+      position: relative;
+    }
+
+    .ctl-slide-10 .ctl-left {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 107px 0 83px 56px;
+    }
+
+    .ctl-slide-10 .ctl-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 2;
+    }
+
+    .ctl-slide-10 .ctl-title {
+      color: #76716A;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 45.078px;
+      margin: 0;
+    }
+
+    .ctl-slide-10 .ctl-subtitle {
+      color: rgba(49, 49, 49, 0.80);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    .ctl-slide-10 .ctl-description {
+      color: rgba(49, 49, 49, 0.80);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+      margin: 0;
+      max-width: 451px;
+    }
+
+    .ctl-slide-10 .ctl-year {
+      color: rgba(0, 0, 0, 0.20);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 93.869px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 93.697px;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .ctl-slide-10 .ctl-image {
+      width: 60%;
+      padding: 107px 55px 83px 0;
+      box-sizing: border-box;
+    }
+
+    .ctl-slide-10 .ctl-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
     }
 
     /* ========================
@@ -1055,15 +1122,20 @@
         </div>
       </div>
 
-      <!-- SLIDE 10 - 2019/2026 - Legado -->
-      <div class="ctl-slide ctl-slide-10 ctl-slide-placeholder" data-index="9">
-        <div class="ctl-content">
-          <span class="ctl-label">Legado</span>
-          <h2 class="ctl-title">2019 / 2026</h2>
-          <p class="ctl-description">Más de cuatro décadas de historia construyendo el futuro. Un legado que se renueva con cada proyecto.</p>
+      <!-- SLIDE 10 - 2019-2026 - Legado -->
+      <div class="ctl-slide ctl-slide-10" data-index="9">
+        <div class="ctl-left">
+          <div class="ctl-content">
+            <h2 class="ctl-title">Legado</h2>
+            <h3 class="ctl-subtitle">Premio PAU y 40+ años de legado</h3>
+            <p class="ctl-description">
+              Portal La Florida gana el Premio Aporte Urbano (PAU) 2019 del Ministerio de Vivienda. En 2022 la empresa celebró 40 años, más de 200 obras y el mayor proyecto de su historia: La Platina, con más de 1.200 familias beneficiadas.
+            </p>
+          </div>
+          <span class="ctl-year">2019 -2026</span>
         </div>
         <div class="ctl-image">
-          <img src="https://placehold.co/1000x800/e8e4df/1a3a5c?text=Legado" alt="Legado">
+          <img src="timeline-assets/image-2019.png" alt="Legado 2019-2026">
         </div>
       </div>
 

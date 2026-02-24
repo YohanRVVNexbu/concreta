@@ -71,7 +71,7 @@
       --navbar-height: 80px;
       position: relative;
       width: 100%;
-      height: calc(100vh - var(--navbar-height));
+      height: calc(100vh - var(--navbar-height) - 80px);
       overflow: hidden;
     }
 
@@ -112,10 +112,10 @@
     .ctl-slide-1 .ctl-year {
       color: rgba(255, 255, 255, 0.20);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 251.927px;
+      font-size: clamp(150px, 13.5vw, 252px);
       font-style: normal;
       font-weight: 400;
-      line-height: 251.467px;
+      line-height: 1;
       position: absolute;
       top: 94.5px;
       left: 60px;
@@ -152,6 +152,7 @@
       width: 60%;
       position: relative;
       margin-left: auto;
+      z-index: 2;
     }
 
     .ctl-slide-1 .ctl-image img {
@@ -206,10 +207,10 @@
     .ctl-slide-2 .ctl-year {
       color: rgba(44, 82, 147, 0.20);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 333.243px;
+      font-size: clamp(200px, 17.3vw, 333px);
       font-style: normal;
       font-weight: 400;
-      line-height: 332.634px;
+      line-height: 1;
       position: absolute;
       bottom: 130px;
       right: 53px;
@@ -251,7 +252,7 @@
     .ctl-slide-5 { background: #28374E; }
     .ctl-slide-6 { background: #061C42; }
     .ctl-slide-7 {
-      background: url('timeline-assets/image-2005.png') 50% / cover no-repeat;
+      background: url('timeline-assets/image-2005.webp') 50% / cover no-repeat;
     }
     .ctl-slide-8 { background: #EAEDF0; }
     .ctl-slide-9 { background: #061C42; }
@@ -369,13 +370,12 @@
     }
 
     .ctl-slide-3 .ctl-year {
-      color: rgba(0, 0, 0, 0.20);
+      color: rgba(0, 0, 0, 0.12);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 180.014px;
+      font-size: clamp(120px, 9.4vw, 180px);
       font-style: normal;
       font-weight: 400;
-      line-height: 179.685px;
-      opacity: 0.6;
+      line-height: 1;
       pointer-events: none;
       margin-left: auto;
       white-space: nowrap;
@@ -442,10 +442,10 @@
     .ctl-slide-4 .ctl-year {
       color: rgba(200, 213, 235, 0.40);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 266.359px;
+      font-size: clamp(160px, 13.9vw, 266px);
       font-style: normal;
       font-weight: 400;
-      line-height: 265.873px;
+      line-height: 1;
       position: absolute;
       bottom: 40px;
       right: calc(60% + 52px);
@@ -533,10 +533,10 @@
     .ctl-slide-5 .ctl-year {
       color: rgba(255, 255, 255, 0.60);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 267.086px;
+      font-size: clamp(160px, 13.9vw, 267px);
       font-style: normal;
       font-weight: 400;
-      line-height: 266.599px;
+      line-height: 1;
       z-index: 1;
       pointer-events: none;
     }
@@ -596,10 +596,10 @@
     .ctl-slide-6 .ctl-year {
       color: rgba(200, 213, 235, 0.40);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 266.359px;
+      font-size: clamp(160px, 13.9vw, 266px);
       font-style: normal;
       font-weight: 400;
-      line-height: 265.873px;
+      line-height: 1;
       align-self: flex-end;
       margin-right: 172px;
       pointer-events: none;
@@ -623,7 +623,7 @@
       position: relative;
       flex-direction: column;
       justify-content: space-between;
-      padding: 60px 68px 120px 60px;
+      padding: 60px 68px 30px 60px;
       box-sizing: border-box;
     }
 
@@ -665,13 +665,13 @@
     .ctl-slide-7 .ctl-year {
       color: rgba(255, 255, 255, 0.60);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 373.772px;
+      font-size: clamp(220px, 19.5vw, 374px);
       font-style: normal;
       font-weight: 400;
-      line-height: 373.09px;
+      line-height: 1;
       pointer-events: none;
       z-index: 2;
-      margin-bottom: 60px;
+      margin-bottom: 0;
     }
 
     /* ========================
@@ -726,13 +726,12 @@
     }
 
     .ctl-slide-8 .ctl-year {
-      color: rgba(0, 0, 0, 0.20);
+      color: rgba(0, 0, 0, 0.12);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 180.014px;
+      font-size: clamp(120px, 9.4vw, 180px);
       font-style: normal;
       font-weight: 400;
-      line-height: 179.685px;
-      opacity: 0.6;
+      line-height: 1;
       pointer-events: none;
       margin-left: auto;
       white-space: nowrap;
@@ -809,10 +808,10 @@
     .ctl-slide-9 .ctl-year {
       color: rgba(200, 213, 235, 0.40);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 314.132px;
+      font-size: clamp(180px, 16.4vw, 314px);
       font-style: normal;
       font-weight: 400;
-      line-height: 313.559px;
+      line-height: 1;
       pointer-events: none;
       z-index: 2;
       position: absolute;
@@ -885,10 +884,10 @@
     .ctl-slide-10 .ctl-year {
       color: rgba(0, 0, 0, 0.20);
       font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-      font-size: 93.869px;
+      font-size: clamp(60px, 4.9vw, 94px);
       font-style: normal;
       font-weight: 400;
-      line-height: 93.697px;
+      line-height: 1;
       pointer-events: none;
       white-space: nowrap;
     }
@@ -950,22 +949,37 @@
     /* ========================
        ANIMATIONS
     ======================== */
+    /* Textos: revelado de abajo hacia arriba sin moverse */
     .ctl-slide .ctl-content > * {
       opacity: 0;
-      transform: translateY(25px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      clip-path: inset(100% 0 0 0);
+      transition: opacity 0.6s ease, clip-path 0.6s ease;
     }
 
-    .ctl-slide.ctl-active .ctl-content > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-    .ctl-slide.ctl-active .ctl-content > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.35s; }
-    .ctl-slide.ctl-active .ctl-content > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+    .ctl-slide.ctl-active .ctl-content > *:nth-child(1) { opacity: 1; clip-path: inset(0 0 0 0); transition-delay: 0.2s; }
+    .ctl-slide.ctl-active .ctl-content > *:nth-child(2) { opacity: 1; clip-path: inset(0 0 0 0); transition-delay: 0.4s; }
+    .ctl-slide.ctl-active .ctl-content > *:nth-child(3) { opacity: 1; clip-path: inset(0 0 0 0); transition-delay: 0.6s; }
 
-    .ctl-slide .ctl-image img {
+    /* Año: fade in suave */
+    .ctl-slide .ctl-year {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .ctl-slide.ctl-active .ctl-year {
+      opacity: 1;
+      transition-delay: 0.1s;
+    }
+
+    /* Imágenes: zoom suave */
+    .ctl-slide .ctl-image img,
+    .ctl-slide .ctl-images img {
       transform: scale(1.08);
       transition: transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
 
-    .ctl-slide.ctl-active .ctl-image img {
+    .ctl-slide.ctl-active .ctl-image img,
+    .ctl-slide.ctl-active .ctl-images img {
       transform: scale(1);
     }
   </style>
@@ -986,7 +1000,7 @@
           </p>
         </div>
         <div class="ctl-image">
-          <img src="timeline-assets/image-1982.png" alt="Origen 1982">
+          <img src="timeline-assets/image-1982.webp" alt="Origen 1982">
         </div>
       </div>
 
@@ -994,7 +1008,7 @@
       <div class="ctl-slide ctl-slide-2" data-index="1">
         <span class="ctl-year">1984</span>
         <div class="ctl-image">
-          <img src="timeline-assets/image-1984.png" alt="Primera Obra 1984">
+          <img src="timeline-assets/image-1984.webp" alt="Primera Obra 1984">
         </div>
         <div class="ctl-content">
           <h2 class="ctl-title">Primera obra</h2>
@@ -1018,9 +1032,9 @@
           <span class="ctl-year">1985 -1988</span>
         </div>
         <div class="ctl-images">
-          <img src="timeline-assets/image-1985-1.png" alt="Expansión 1985 - Imagen 1">
-          <img src="timeline-assets/image-1985-2.png" alt="Expansión 1985 - Imagen 2">
-          <img src="timeline-assets/image-1985-3.png" alt="Expansión 1985 - Imagen 3">
+          <img src="timeline-assets/image-1985-1.webp" alt="Expansión 1985 - Imagen 1">
+          <img src="timeline-assets/image-1985-2.webp" alt="Expansión 1985 - Imagen 2">
+          <img src="timeline-assets/image-1985-3.webp" alt="Expansión 1985 - Imagen 3">
         </div>
       </div>
 
@@ -1035,14 +1049,14 @@
           </p>
         </div>
         <div class="ctl-image">
-          <img src="timeline-assets/image-1988.png" alt="Consolidación 1988">
+          <img src="timeline-assets/image-1988.webp" alt="Consolidación 1988">
         </div>
       </div>
 
       <!-- SLIDE 5 - 1992 - Innovación -->
       <div class="ctl-slide ctl-slide-5" data-index="4">
         <div class="ctl-image">
-          <img src="timeline-assets/image-1992.png" alt="Innovación 1992">
+          <img src="timeline-assets/image-1992.webp" alt="Innovación 1992">
         </div>
         <div class="ctl-right">
           <span class="ctl-year">1992</span>
@@ -1069,7 +1083,7 @@
           <span class="ctl-year">1997</span>
         </div>
         <div class="ctl-image">
-          <img src="timeline-assets/image-1997.png" alt="Tecnología 1997">
+          <img src="timeline-assets/image-1997.webp" alt="Tecnología 1997">
         </div>
       </div>
 
@@ -1098,9 +1112,9 @@
           <span class="ctl-year">2007-2008</span>
         </div>
         <div class="ctl-images">
-          <img src="timeline-assets/image-2007-1.png" alt="Impacto social 2007 - Imagen 1">
-          <img src="timeline-assets/image-2007-2.png" alt="Impacto social 2007 - Imagen 2">
-          <img src="timeline-assets/image-2007-3.png" alt="Impacto social 2007 - Imagen 3">
+          <img src="timeline-assets/image-2007-1.webp" alt="Impacto social 2007 - Imagen 1">
+          <img src="timeline-assets/image-2007-2.webp" alt="Impacto social 2007 - Imagen 2">
+          <img src="timeline-assets/image-2007-3.webp" alt="Impacto social 2007 - Imagen 3">
         </div>
       </div>
 
@@ -1117,7 +1131,7 @@
           <span class="ctl-year">2015</span>
         </div>
         <div class="ctl-image">
-          <img src="timeline-assets/image-2015.png" alt="Gobernanza 2015">
+          <img src="timeline-assets/image-2015.webp" alt="Gobernanza 2015">
         </div>
       </div>
 
@@ -1134,7 +1148,7 @@
           <span class="ctl-year">2019 -2026</span>
         </div>
         <div class="ctl-image">
-          <img src="timeline-assets/image-2019.png" alt="Legado 2019-2026">
+          <img src="timeline-assets/image-2019.webp" alt="Legado 2019-2026">
         </div>
       </div>
 
@@ -1162,6 +1176,13 @@
       var slides = document.querySelectorAll('.ctl-slide');
       var prevBtn = document.getElementById('ctlPrevBtn');
       var nextBtn = document.getElementById('ctlNextBtn');
+
+      // Precargar todas las imágenes al iniciar
+      var allImages = track.querySelectorAll('img');
+      allImages.forEach(function (img) {
+        var preload = new Image();
+        preload.src = img.src;
+      });
 
       var totalSlides = slides.length;
       var currentIndex = 0;

@@ -88,7 +88,6 @@
       position: relative;
       display: flex;
       overflow: hidden;
-      box-sizing: border-box;
     }
 
     /* ========================
@@ -624,7 +623,8 @@
       position: relative;
       flex-direction: column;
       justify-content: space-between;
-      padding: 60px 68px 40px 60px;
+      padding: 60px 68px 120px 60px;
+      box-sizing: border-box;
     }
 
     .ctl-slide-7 .ctl-content {
@@ -671,7 +671,7 @@
       line-height: 373.09px;
       pointer-events: none;
       z-index: 2;
-      margin-bottom: 0;
+      margin-bottom: 60px;
     }
 
     /* ========================
@@ -902,8 +902,7 @@
     .ctl-slide-10 .ctl-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      border-radius: 0;
+      object-fit: contain;
     }
 
     /* ========================

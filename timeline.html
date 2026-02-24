@@ -88,6 +88,7 @@
       position: relative;
       display: flex;
       overflow: hidden;
+      box-sizing: border-box;
     }
 
     /* ========================
@@ -253,7 +254,7 @@
     .ctl-slide-7 {
       background: url('timeline-assets/image-2005.png') 50% / cover no-repeat;
     }
-    .ctl-slide-8 { background: #0B1A2E; }
+    .ctl-slide-8 { background: #EAEDF0; }
     .ctl-slide-9 { background: #0B1A2E; }
     .ctl-slide-10 { background: #F2F0ED; }
 
@@ -673,6 +674,85 @@
       margin-bottom: 60px;
     }
 
+    /* ========================
+       SLIDE 8 - 2007-2008 - Impacto social
+    ======================== */
+    .ctl-slide-8 {
+      flex-direction: column;
+    }
+
+    .ctl-slide-8 .ctl-top {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      padding: 55px 80px 0 80px;
+    }
+
+    .ctl-slide-8 .ctl-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 2;
+      max-width: 380px;
+      flex-shrink: 0;
+    }
+
+    .ctl-slide-8 .ctl-title {
+      color: #76716A;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 45.078px;
+      margin: 0;
+      align-self: stretch;
+    }
+
+    .ctl-slide-8 .ctl-subtitle {
+      color: rgba(49, 49, 49, 0.80);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 120%;
+      align-self: stretch;
+    }
+
+    .ctl-slide-8 .ctl-description {
+      color: rgba(49, 49, 49, 0.80);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+      align-self: stretch;
+    }
+
+    .ctl-slide-8 .ctl-year {
+      color: rgba(0, 0, 0, 0.20);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 180.014px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 179.685px;
+      opacity: 0.6;
+      pointer-events: none;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    .ctl-slide-8 .ctl-images {
+      display: flex;
+      gap: 40px;
+      padding: 0 80px 107px 80px;
+      margin-top: auto;
+    }
+
+    .ctl-slide-8 .ctl-images img {
+      flex: 1;
+      min-width: 0;
+      height: 354px;
+      aspect-ratio: 446/347;
+      object-fit: cover;
+    }
+
     /* Dark text variants for light bg slides */
     .ctl-slide-10 .ctl-label { color: rgba(11, 26, 46, 0.5); }
     .ctl-slide-10 .ctl-title { color: #0B1A2E; }
@@ -861,15 +941,22 @@
         <span class="ctl-year">2005</span>
       </div>
 
-      <!-- SLIDE 8 - 2010 - Sostenibilidad -->
-      <div class="ctl-slide ctl-slide-8 ctl-slide-placeholder" data-index="7">
-        <div class="ctl-content">
-          <span class="ctl-label">Sostenibilidad</span>
-          <h2 class="ctl-title">2010</h2>
-          <p class="ctl-description">Implementación de prácticas de construcción sostenible y certificaciones ambientales.</p>
+      <!-- SLIDE 8 - 2007-2008 - Impacto social -->
+      <div class="ctl-slide ctl-slide-8" data-index="7">
+        <div class="ctl-top">
+          <div class="ctl-content">
+            <h2 class="ctl-title">Impacto social</h2>
+            <h3 class="ctl-subtitle">Nace Concrecasa</h3>
+            <p class="ctl-description">
+              Con la llegada de Enrique Pavez como Gerente General, nace Concrecasa: viviendas sociales de calidad para familias vulnerables. Un modelo que combina compromiso social con excelencia constructiva.
+            </p>
+          </div>
+          <span class="ctl-year">2007-2008</span>
         </div>
-        <div class="ctl-image">
-          <img src="https://placehold.co/1200x900/1a3a5c/ffffff?text=2010" alt="Sostenibilidad 2010">
+        <div class="ctl-images">
+          <img src="timeline-assets/image-2007-1.png" alt="Impacto social 2007 - Imagen 1">
+          <img src="timeline-assets/image-2007-2.png" alt="Impacto social 2007 - Imagen 2">
+          <img src="timeline-assets/image-2007-3.png" alt="Impacto social 2007 - Imagen 3">
         </div>
       </div>
 
@@ -929,7 +1016,7 @@
       var touchEndX = 0;
 
       // Slides con fondo claro (flechas oscuras)
-      var lightSlides = ['ctl-slide-2', 'ctl-slide-3', 'ctl-slide-10'];
+      var lightSlides = ['ctl-slide-2', 'ctl-slide-3', 'ctl-slide-8', 'ctl-slide-10'];
 
       function goToSlide(index) {
         if (isAnimating || index === currentIndex || index < 0 || index >= totalSlides) return;

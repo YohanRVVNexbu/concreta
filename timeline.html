@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Línea de Tiempo - Concreta</title>
+  <style>
+    @font-face {
+      font-family: "Century Gothic";
+      src: url("wp-content/uploads/2025/12/CenturyGothicPaneuropeanThin.ttf") format("truetype");
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Century Gothic";
+      src: url("wp-content/uploads/2025/12/CenturyGothicPaneuropeanLight.ttf") format("truetype");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Century Gothic";
+      src: url("wp-content/uploads/2025/12/CenturyGothicPaneuropeanRegular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Century Gothic";
+      src: url("wp-content/uploads/2025/12/CenturyGothicPaneuropeanSemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Century Gothic";
+      src: url("wp-content/uploads/2025/12/CenturyGothicPaneuropeanBold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Century Gothic";
+      src: url("wp-content/uploads/2025/12/CenturyGothicPaneuropeanExtraBold.ttf") format("truetype");
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Century Gothic";
+      src: url("wp-content/uploads/2025/12/CenturyGothicPaneuropeanBlack.ttf") format("truetype");
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ========================
+       BASE / WRAPPER
+    ======================== */
+    html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+    }
+
+    .ctl-wrapper {
+      --navbar-height: 80px;
+      position: relative;
+      width: 100%;
+      height: calc(100vh - var(--navbar-height));
+      overflow: hidden;
+    }
+
+    .ctl-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+      will-change: transform;
+    }
+
+    .ctl-slide {
+      min-width: 100vw;
+      height: 100%;
+      position: relative;
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* ========================
+       SLIDE 1 - 1982 - Origen
+    ======================== */
+    .ctl-slide-1 {
+      background: #2C5293;
+      position: relative;
+    }
+
+    .ctl-slide-1 .ctl-content {
+      position: absolute;
+      bottom: 100px;
+      left: 42px;
+      right: calc(60% + 55px);
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      gap: 16px;
+    }
+
+    .ctl-slide-1 .ctl-year {
+      color: rgba(255, 255, 255, 0.20);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 251.927px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 251.467px;
+      position: absolute;
+      top: 94.5px;
+      left: 60px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .ctl-slide-1 .ctl-title {
+      color: #FFF;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    .ctl-slide-1 .ctl-subtitle {
+      color: #FFF;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 120%;
+    }
+
+    .ctl-slide-1 .ctl-description {
+      color: #FFF;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    .ctl-slide-1 .ctl-image {
+      width: 60%;
+      position: relative;
+      margin-left: auto;
+    }
+
+    .ctl-slide-1 .ctl-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ========================
+       SLIDE 2 - 1984 - Primera Obra
+    ======================== */
+    .ctl-slide-2 {
+      background: #EFEFEF;
+      position: relative;
+    }
+
+    .ctl-slide-2 .ctl-image {
+      width: 645px;
+      min-width: 645px;
+      height: 432px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .ctl-slide-2 .ctl-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 106/71;
+    }
+
+    .ctl-slide-2 .ctl-content {
+      position: absolute;
+      top: 131px;
+      right: 53px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      z-index: 2;
+      max-width: 435px;
+    }
+
+    .ctl-slide-2 .ctl-content > * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .ctl-slide-2 .ctl-year {
+      color: rgba(44, 82, 147, 0.20);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 333.243px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 332.634px;
+      position: absolute;
+      bottom: 130px;
+      right: 53px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .ctl-slide-2 .ctl-title {
+      color: #2C5293;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 45.078px;
+      margin: 0;
+    }
+
+    .ctl-slide-2 .ctl-subtitle {
+      color: #2C5293;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 120%;
+    }
+
+    .ctl-slide-2 .ctl-description {
+      color: #2C5293;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+      max-width: 435px;
+    }
+
+    /* ========================
+       SLIDES 3-10 (placeholder layouts, se irán reemplazando)
+    ======================== */
+    .ctl-slide-3 { background: #E8E4DF; }
+    .ctl-slide-4 { background: #0B1A2E; }
+    .ctl-slide-5 { background: #0B1A2E; }
+    .ctl-slide-6 { background: #0B1A2E; }
+    .ctl-slide-7 { background: #0B1A2E; }
+    .ctl-slide-8 { background: #0B1A2E; }
+    .ctl-slide-9 { background: #0B1A2E; }
+    .ctl-slide-10 { background: #F2F0ED; }
+
+    /* Placeholder layout para slides 3-10 */
+    .ctl-slide-placeholder .ctl-content {
+      width: 45%;
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 2;
+      gap: 16px;
+    }
+
+    .ctl-slide-placeholder .ctl-image {
+      width: 55%;
+      position: relative;
+    }
+
+    .ctl-slide-placeholder .ctl-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ctl-slide-placeholder .ctl-year-bg {
+      position: absolute;
+      font-size: clamp(120px, 18vw, 300px);
+      font-weight: 700;
+      letter-spacing: -5px;
+      line-height: 1;
+      z-index: 1;
+      pointer-events: none;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+      color: transparent;
+    }
+
+    .ctl-slide-placeholder .ctl-label {
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .ctl-slide-placeholder .ctl-title {
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    .ctl-slide-placeholder .ctl-description {
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Dark text variants for light bg slides */
+    .ctl-slide-3 .ctl-label,
+    .ctl-slide-10 .ctl-label { color: rgba(11, 26, 46, 0.5); }
+    .ctl-slide-3 .ctl-title,
+    .ctl-slide-10 .ctl-title { color: #0B1A2E; }
+    .ctl-slide-3 .ctl-description,
+    .ctl-slide-10 .ctl-description { color: rgba(11, 26, 46, 0.6); }
+    .ctl-slide-3 .ctl-year-bg,
+    .ctl-slide-10 .ctl-year-bg {
+      -webkit-text-stroke: 1px rgba(11, 26, 46, 0.15);
+    }
+
+    /* ========================
+       NAVIGATION ARROWS
+    ======================== */
+    .ctl-nav-arrows {
+      position: absolute;
+      bottom: 38px;
+      right: 60px;
+      display: flex;
+      gap: 12px;
+      z-index: 30;
+    }
+
+    .ctl-nav-arrow {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .ctl-nav-arrow:hover {
+      border-color: #fff;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .ctl-nav-arrow.ctl-disabled {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    .ctl-nav-arrow svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ========================
+       ANIMATIONS
+    ======================== */
+    .ctl-slide .ctl-content > * {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .ctl-slide.ctl-active .ctl-content > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+    .ctl-slide.ctl-active .ctl-content > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.35s; }
+    .ctl-slide.ctl-active .ctl-content > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+
+    .ctl-slide .ctl-image img {
+      transform: scale(1.08);
+      transition: transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .ctl-slide.ctl-active .ctl-image img {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ctl-wrapper">
+    <div class="ctl-track" id="ctlTrack">
+
+      <!-- SLIDE 1 - 1982 - Origen -->
+      <div class="ctl-slide ctl-slide-1 ctl-active" data-index="0">
+        <span class="ctl-year">1982</span>
+        <div class="ctl-content">
+          <h2 class="ctl-title">Origen</h2>
+          <h3 class="ctl-subtitle">Fundación en medio de la crisis</h3>
+          <p class="ctl-description">
+            Rodrigo Donoso y Guillermo Larraín fundan Concreta en plena crisis económica, con el desempleo al 25%. La adversidad forja los cimientos de la empresa y define su carácter resiliente.
+          </p>
+        </div>
+        <div class="ctl-image">
+          <img src="timeline-assets/image-1982.png" alt="Origen 1982">
+        </div>
+      </div>
+
+      <!-- SLIDE 2 - 1984 - Primera Obra -->
+      <div class="ctl-slide ctl-slide-2" data-index="1">
+        <span class="ctl-year">1984</span>
+        <div class="ctl-image">
+          <img src="timeline-assets/image-1984.png" alt="Primera Obra 1984">
+        </div>
+        <div class="ctl-content">
+          <h2 class="ctl-title">Primera obra</h2>
+          <h3 class="ctl-subtitle">Las primeras 102 viviendas</h3>
+          <p class="ctl-description">
+            Primera obra formal para el Serviu en La Cisterna: 102 casas. Un hito que marcó el inicio del compromiso de Concreta con la vivienda social y las familias chilenas.
+          </p>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 - 1985-1988 - Expansión -->
+      <div class="ctl-slide ctl-slide-3 ctl-slide-placeholder" data-index="2">
+        <div class="ctl-content">
+          <span class="ctl-label">Expansión</span>
+          <h2 class="ctl-title">1985 - 1988</h2>
+          <p class="ctl-description">Período de crecimiento sostenido donde la empresa amplía su cartera de servicios y fortalece su equipo humano.</p>
+        </div>
+        <div class="ctl-image">
+          <img src="https://placehold.co/1200x900/8a9ab0/ffffff?text=1985-1988" alt="Expansión">
+        </div>
+      </div>
+
+      <!-- SLIDE 4 - 1988 - Consolidación -->
+      <div class="ctl-slide ctl-slide-4 ctl-slide-placeholder" data-index="3">
+        <div class="ctl-content">
+          <span class="ctl-label">Consolidación</span>
+          <h2 class="ctl-title">1988</h2>
+          <p class="ctl-description">La empresa se consolida como un referente en la industria de la construcción.</p>
+        </div>
+        <div class="ctl-image">
+          <img src="https://placehold.co/1200x900/1a3a5c/ffffff?text=1988" alt="Consolidación 1988">
+        </div>
+      </div>
+
+      <!-- SLIDE 5 - 1992 - Innovación -->
+      <div class="ctl-slide ctl-slide-5 ctl-slide-placeholder" data-index="4">
+        <div class="ctl-content">
+          <span class="ctl-label">Innovación</span>
+          <h2 class="ctl-title">1992</h2>
+          <p class="ctl-description">Se incorporan nuevas metodologías y procesos constructivos innovadores.</p>
+        </div>
+        <div class="ctl-image">
+          <img src="https://placehold.co/1200x900/2a4a6c/ffffff?text=1992" alt="Innovación 1992">
+        </div>
+      </div>
+
+      <!-- SLIDE 6 - 1997 - Tecnología -->
+      <div class="ctl-slide ctl-slide-6 ctl-slide-placeholder" data-index="5">
+        <div class="ctl-content">
+          <span class="ctl-label">Tecnología</span>
+          <h2 class="ctl-title">1997</h2>
+          <p class="ctl-description">Inversión significativa en tecnología de punta y maquinaria especializada.</p>
+        </div>
+        <div class="ctl-image">
+          <img src="https://placehold.co/1200x900/1a3a5c/ffffff?text=1997" alt="Tecnología 1997">
+        </div>
+      </div>
+
+      <!-- SLIDE 7 - 2005 - Estrategia -->
+      <div class="ctl-slide ctl-slide-7 ctl-slide-placeholder" data-index="6">
+        <div class="ctl-content">
+          <span class="ctl-label">Estrategia</span>
+          <h2 class="ctl-title">2005</h2>
+          <p class="ctl-description">Redefinición estratégica del negocio, enfocándose en proyectos de alto impacto.</p>
+        </div>
+        <div class="ctl-image">
+          <img src="https://placehold.co/1200x900/2a4a6c/ffffff?text=2005" alt="Estrategia 2005">
+        </div>
+      </div>
+
+      <!-- SLIDE 8 - 2010 - Sostenibilidad -->
+      <div class="ctl-slide ctl-slide-8 ctl-slide-placeholder" data-index="7">
+        <div class="ctl-content">
+          <span class="ctl-label">Sostenibilidad</span>
+          <h2 class="ctl-title">2010</h2>
+          <p class="ctl-description">Implementación de prácticas de construcción sostenible y certificaciones ambientales.</p>
+        </div>
+        <div class="ctl-image">
+          <img src="https://placehold.co/1200x900/1a3a5c/ffffff?text=2010" alt="Sostenibilidad 2010">
+        </div>
+      </div>
+
+      <!-- SLIDE 9 - 2015 - Reconocimiento -->
+      <div class="ctl-slide ctl-slide-9 ctl-slide-placeholder" data-index="8">
+        <div class="ctl-content">
+          <span class="ctl-label">Reconocimiento</span>
+          <h2 class="ctl-title">2015</h2>
+          <p class="ctl-description">Múltiples reconocimientos y premios nacionales e internacionales.</p>
+        </div>
+        <div class="ctl-image">
+          <img src="https://placehold.co/1200x900/2a4a6c/ffffff?text=2015" alt="Reconocimiento 2015">
+        </div>
+      </div>
+
+      <!-- SLIDE 10 - 2019/2026 - Legado -->
+      <div class="ctl-slide ctl-slide-10 ctl-slide-placeholder" data-index="9">
+        <div class="ctl-content">
+          <span class="ctl-label">Legado</span>
+          <h2 class="ctl-title">2019 / 2026</h2>
+          <p class="ctl-description">Más de cuatro décadas de historia construyendo el futuro. Un legado que se renueva con cada proyecto.</p>
+        </div>
+        <div class="ctl-image">
+          <img src="https://placehold.co/1000x800/e8e4df/1a3a5c?text=Legado" alt="Legado">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="ctl-nav-arrows">
+      <button class="ctl-nav-arrow" id="ctlPrevBtn" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="ctl-nav-arrow" id="ctlNextBtn" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    (function () {
+      var track = document.getElementById('ctlTrack');
+      var slides = document.querySelectorAll('.ctl-slide');
+      var prevBtn = document.getElementById('ctlPrevBtn');
+      var nextBtn = document.getElementById('ctlNextBtn');
+
+      var totalSlides = slides.length;
+      var currentIndex = 0;
+      var isAnimating = false;
+      var touchStartX = 0;
+      var touchEndX = 0;
+
+      // Slides con fondo claro (flechas oscuras)
+      var lightSlides = ['ctl-slide-2', 'ctl-slide-3', 'ctl-slide-10'];
+
+      function goToSlide(index) {
+        if (isAnimating || index === currentIndex || index < 0 || index >= totalSlides) return;
+        isAnimating = true;
+
+        slides[currentIndex].classList.remove('ctl-active');
+        currentIndex = index;
+
+        track.style.transform = 'translateX(-' + (currentIndex * 100) + 'vw)';
+
+        setTimeout(function () {
+          slides[currentIndex].classList.add('ctl-active');
+        }, 100);
+
+        updateUI();
+
+        setTimeout(function () {
+          isAnimating = false;
+        }, 900);
+      }
+
+      function updateUI() {
+        prevBtn.classList.toggle('ctl-disabled', currentIndex === 0);
+        nextBtn.classList.toggle('ctl-disabled', currentIndex === totalSlides - 1);
+
+        var isLight = lightSlides.some(function (cls) {
+          return slides[currentIndex].classList.contains(cls);
+        });
+
+        var arrows = document.querySelectorAll('.ctl-nav-arrow');
+        arrows.forEach(function (a) {
+          a.style.borderColor = isLight ? 'rgba(11,26,46,0.3)' : 'rgba(255,255,255,0.3)';
+          a.style.color = isLight ? 'rgba(11,26,46,0.6)' : 'rgba(255,255,255,0.6)';
+        });
+      }
+
+      prevBtn.addEventListener('click', function () { goToSlide(currentIndex - 1); });
+      nextBtn.addEventListener('click', function () { goToSlide(currentIndex + 1); });
+
+      // Scroll — solo dentro del wrapper
+      var wrapper = document.querySelector('.ctl-wrapper');
+      var scrollCooldown = false;
+      wrapper.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (scrollCooldown) return;
+        scrollCooldown = true;
+
+        if (e.deltaY > 5 || e.deltaX > 5) {
+          goToSlide(currentIndex + 1);
+        } else if (e.deltaY < -5 || e.deltaX < -5) {
+          goToSlide(currentIndex - 1);
+        } else {
+          scrollCooldown = false;
+          return;
+        }
+
+        setTimeout(function () { scrollCooldown = false; }, 1200);
+      }, { passive: false });
+
+      // Touch
+      wrapper.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      wrapper.addEventListener('touchend', function (e) {
+        touchEndX = e.changedTouches[0].screenX;
+        var diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 60) {
+          goToSlide(diff > 0 ? currentIndex + 1 : currentIndex - 1);
+        }
+      }, { passive: true });
+
+      // Keyboard
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goToSlide(currentIndex + 1);
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goToSlide(currentIndex - 1);
+      });
+
+      updateUI();
+    })();
+  </script>
+
+</body>
+</html>

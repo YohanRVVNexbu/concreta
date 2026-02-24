@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Allow these files/folders
+!.gitignore
+!timeline.html
+!timeline-assets/
+!timeline-assets/**

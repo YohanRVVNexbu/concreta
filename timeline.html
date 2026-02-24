@@ -246,7 +246,7 @@
     /* ========================
        SLIDES 3-10 (placeholder layouts, se irán reemplazando)
     ======================== */
-    .ctl-slide-3 { background: #E8E4DF; }
+    .ctl-slide-3 { background: #C9C9C9; }
     .ctl-slide-4 { background: #0B1A2E; }
     .ctl-slide-5 { background: #0B1A2E; }
     .ctl-slide-6 { background: #0B1A2E; }
@@ -315,14 +315,89 @@
       color: rgba(255, 255, 255, 0.7);
     }
 
+    /* ========================
+       SLIDE 3 - 1985-1988 - Expansión
+    ======================== */
+    .ctl-slide-3 {
+      flex-direction: column;
+    }
+
+    .ctl-slide-3 .ctl-top {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      padding: 55px 80px 0 80px;
+    }
+
+    .ctl-slide-3 .ctl-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 2;
+      max-width: 380px;
+      flex-shrink: 0;
+    }
+
+    .ctl-slide-3 .ctl-title {
+      color: #76716A;
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 45.078px;
+      margin: 0;
+      align-self: stretch;
+    }
+
+    .ctl-slide-3 .ctl-subtitle {
+      color: rgba(49, 49, 49, 0.80);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 120%;
+      align-self: stretch;
+    }
+
+    .ctl-slide-3 .ctl-description {
+      color: rgba(49, 49, 49, 0.80);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+      align-self: stretch;
+    }
+
+    .ctl-slide-3 .ctl-year {
+      color: rgba(0, 0, 0, 0.20);
+      font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      font-size: 180.014px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 179.685px;
+      opacity: 0.6;
+      pointer-events: none;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    .ctl-slide-3 .ctl-images {
+      display: flex;
+      gap: 40px;
+      padding: 0 80px 107px 80px;
+      margin-top: auto;
+    }
+
+    .ctl-slide-3 .ctl-images img {
+      flex: 1;
+      min-width: 0;
+      height: 354px;
+      aspect-ratio: 446/347;
+      object-fit: cover;
+    }
+
     /* Dark text variants for light bg slides */
-    .ctl-slide-3 .ctl-label,
     .ctl-slide-10 .ctl-label { color: rgba(11, 26, 46, 0.5); }
-    .ctl-slide-3 .ctl-title,
     .ctl-slide-10 .ctl-title { color: #0B1A2E; }
-    .ctl-slide-3 .ctl-description,
     .ctl-slide-10 .ctl-description { color: rgba(11, 26, 46, 0.6); }
-    .ctl-slide-3 .ctl-year-bg,
     .ctl-slide-10 .ctl-year-bg {
       -webkit-text-stroke: 1px rgba(11, 26, 46, 0.15);
     }
@@ -428,14 +503,21 @@
       </div>
 
       <!-- SLIDE 3 - 1985-1988 - Expansión -->
-      <div class="ctl-slide ctl-slide-3 ctl-slide-placeholder" data-index="2">
-        <div class="ctl-content">
-          <span class="ctl-label">Expansión</span>
-          <h2 class="ctl-title">1985 - 1988</h2>
-          <p class="ctl-description">Período de crecimiento sostenido donde la empresa amplía su cartera de servicios y fortalece su equipo humano.</p>
+      <div class="ctl-slide ctl-slide-3" data-index="2">
+        <div class="ctl-top">
+          <div class="ctl-content">
+            <h2 class="ctl-title">Expansión</h2>
+            <h3 class="ctl-subtitle">Presencia en regiones del norte</h3>
+            <p class="ctl-description">
+              Entre 1985 y 1988 Concreta se expande más allá de Santiago, construyendo viviendas sociales, lotes con servicio y sucursales bancarias en el norte del país.
+            </p>
+          </div>
+          <span class="ctl-year">1985 -1988</span>
         </div>
-        <div class="ctl-image">
-          <img src="https://placehold.co/1200x900/8a9ab0/ffffff?text=1985-1988" alt="Expansión">
+        <div class="ctl-images">
+          <img src="timeline-assets/image-1985-1.png" alt="Expansión 1985 - Imagen 1">
+          <img src="timeline-assets/image-1985-2.png" alt="Expansión 1985 - Imagen 2">
+          <img src="timeline-assets/image-1985-3.png" alt="Expansión 1985 - Imagen 3">
         </div>
       </div>
 
